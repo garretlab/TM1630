@@ -32,6 +32,7 @@ class TM1630BaseClass {
   public:
     TM1630BaseClass(const uint8_t dioPin, const uint8_t clkPin, const uint8_t stbPin);
     TM1630BaseClass(const uint8_t dioPin, const uint8_t clkPin, const uint8_t stbPin[], const uint8_t modules);
+    ~TM1630BaseClass();
     void begin();
     void begin(uint8_t dispMode,
                uint8_t rw, uint8_t addrMode, uint8_t opMode,

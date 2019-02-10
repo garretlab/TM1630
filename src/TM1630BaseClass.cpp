@@ -14,6 +14,10 @@ TM1630BaseClass::TM1630BaseClass(const uint8_t dioPin, const uint8_t clkPin, con
   this->modules = modules;
 }
 
+TM1630BaseClass::~TM1630BaseClass() {
+  delete [] stbPin;
+}
+
 void TM1630BaseClass::begin() {
   pinMode(dioPin, OUTPUT);
   pinMode(clkPin, OUTPUT);
